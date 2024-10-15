@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AccumulationRegister uuid="6dda2d96-c92e-4cae-8266-275fd815f495">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.НДСЗаписиКнигиПродаж" category="Record">
+				<xr:TypeId>cfe515cb-7904-404b-ab73-22fd29d49f40</xr:TypeId>
+				<xr:ValueId>40204db9-598e-4df3-a2b5-b4a327eaf573</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.НДСЗаписиКнигиПродаж" category="Manager">
+				<xr:TypeId>de17fa7a-4893-4cd5-b7f2-73389615f45b</xr:TypeId>
+				<xr:ValueId>c9ea0fea-ee3e-4926-929d-5fa79b8f35a7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.НДСЗаписиКнигиПродаж" category="Selection">
+				<xr:TypeId>14230ad4-960b-4bd3-9204-c9075356ebc3</xr:TypeId>
+				<xr:ValueId>28d569ff-ed7c-44f6-9c70-e8de25a70faa</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.НДСЗаписиКнигиПродаж" category="List">
+				<xr:TypeId>247b8670-88a7-4b8e-841b-cd7c689f35b1</xr:TypeId>
+				<xr:ValueId>26afa172-9963-42ad-aa4f-1f915b2b6d49</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.НДСЗаписиКнигиПродаж" category="RecordSet">
+				<xr:TypeId>ec897ddc-ea44-4a0c-8431-251dc4a7caea</xr:TypeId>
+				<xr:ValueId>88c33a03-dd76-4150-bcde-bddc002dcebf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.НДСЗаписиКнигиПродаж" category="RecordKey">
+				<xr:TypeId>b8fcb1da-44b3-44fc-927e-6899683084c6</xr:TypeId>
+				<xr:ValueId>9b73c47a-c0ef-46d1-b186-138989e310e6</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>НДСЗаписиКнигиПродаж</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>32b77da9-151d-422f-9b6a-27d2f517f210</ExtendedConfigurationObject>
+			<RegisterType>Turnovers</RegisterType>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="28e954f3-88cf-4fa8-9050-427af930ad5d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Покупатель</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>66b1c1ca-5d9c-4f0a-afb1-e978c389a74c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="e510d492-371e-460d-9ca1-7ff48df855b9">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c9442c91-57ee-45c1-b46a-14cd70181c2d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="b4ef3db3-533a-480b-9699-22d34579217b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>СтавкаНДС</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>9419b9bc-c7f0-4643-87c9-ee8286885a8e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</AccumulationRegister>
+</MetaDataObject>

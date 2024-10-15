@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписиДокумента" id="79">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.Command.ЗаписиДокумента</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗаписиДокументаРасширеннаяПодсказка" id="80"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="7">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Pages name="Страницы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ГруппаБюджет" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бюджет</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаБюджетРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Table name="Бюджет" id="14">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Бюджет</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="БюджетКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="БюджетКоманднаяПанель" id="16">
+								<ChildItems>
+									<Button name="БюджетПодборБюджет" id="81">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборБюджет</CommandName>
+										<ExtendedTooltip name="БюджетПодборБюджетРасширеннаяПодсказка" id="82"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="БюджетРасширеннаяПодсказка" id="17"/>
+							<SearchStringAddition name="БюджетСтрокаПоиска" id="18">
+								<AdditionSource>
+									<Item>Бюджет</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БюджетСтрокаПоискаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="БюджетСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БюджетСостояниеПросмотра" id="21">
+								<AdditionSource>
+									<Item>Бюджет</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БюджетСостояниеПросмотраКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="БюджетСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БюджетУправлениеПоиском" id="24">
+								<AdditionSource>
+									<Item>Бюджет</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БюджетУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="БюджетУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="БюджетНомерСтроки" id="27">
+									<DataPath>Объект.Бюджет.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БюджетНомерСтрокиКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="БюджетНомерСтрокиРасширеннаяПодсказка" id="29"/>
+								</LabelField>
+								<InputField name="БюджетКонтрагент" id="30">
+									<DataPath>Объект.Бюджет.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="БюджетКонтрагентКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="БюджетКонтрагентРасширеннаяПодсказка" id="32"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНаселение" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Население</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНаселениеРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<Table name="Население" id="35">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Население</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НаселениеКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="НаселениеКоманднаяПанель" id="37">
+								<ChildItems>
+									<Button name="НаселениеПодборНаселение" id="83">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборНаселение</CommandName>
+										<ExtendedTooltip name="НаселениеПодборНаселениеРасширеннаяПодсказка" id="84"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НаселениеРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="НаселениеСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>Население</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НаселениеСтрокаПоискаКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="НаселениеСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НаселениеСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>Население</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НаселениеСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="НаселениеСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НаселениеУправлениеПоиском" id="45">
+								<AdditionSource>
+									<Item>Население</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НаселениеУправлениеПоискомКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="НаселениеУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НаселениеНомерСтроки" id="48">
+									<DataPath>Объект.Население.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаселениеНомерСтрокиКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="НаселениеНомерСтрокиРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<InputField name="НаселениеКонтрагент" id="51">
+									<DataPath>Объект.Население.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="НаселениеКонтрагентКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="НаселениеКонтрагентРасширеннаяПодсказка" id="53"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПрочиеПотребители" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие потребители</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПрочиеПотребителиРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="ПрочиеПотребители" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПрочиеПотребители</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПрочиеПотребителиКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="ПрочиеПотребителиКоманднаяПанель" id="58">
+								<ChildItems>
+									<Button name="ПрочиеПотребителиПрочиеПотребители" id="85">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборПрочиеПотребители</CommandName>
+										<ExtendedTooltip name="ПрочиеПотребителиПрочиеПотребителиРасширеннаяПодсказка" id="86"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПрочиеПотребителиРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="ПрочиеПотребителиСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>ПрочиеПотребители</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПрочиеПотребителиСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ПрочиеПотребителиСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПрочиеПотребителиСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>ПрочиеПотребители</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПрочиеПотребителиСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ПрочиеПотребителиСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПрочиеПотребителиУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>ПрочиеПотребители</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПрочиеПотребителиУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ПрочиеПотребителиУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПрочиеПотребителиНомерСтроки" id="69">
+									<DataPath>Объект.ПрочиеПотребители.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПрочиеПотребителиНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ПрочиеПотребителиНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<InputField name="ПрочиеПотребителиКонтрагент" id="72">
+									<DataPath>Объект.ПрочиеПотребители.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПрочиеПотребителиКонтрагентКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПрочиеПотребителиКонтрагентРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ДБЗакреплениеКонтрагентовВГруппы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборБюджет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор бюджет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор бюджет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="ЗаписиДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записи документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записи документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписиДокумента</Action>
+		</Command>
+		<Command name="ПодборНаселение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор население</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор население</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборНаселение</Action>
+		</Command>
+		<Command name="ПодборПрочиеПотребители" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор прочие потребители</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор прочие потребители</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПрочиеПотребители</Action>
+		</Command>
+	</Commands>
+</Form>
